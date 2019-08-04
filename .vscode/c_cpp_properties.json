@@ -4,25 +4,22 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Clang/lib/clang/7.0.1/include",
-                "C:/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/*"
+                "C:\\msys64\\usr\\include\\**"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
+            "compilerPath": "C:\\msys64\\usr\\bin\\gcc",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64",
+            "intelliSenseMode": "gcc-x64",
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": "",
                 "path": [
                     "${workspaceFolder}/**",
-                    "C:/Clang/lib/clang/7.0.1/include",
-                    "C:/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/*"
+                    "C:\\msys64\\usr\\include\\**"
                 ]
             }
         },

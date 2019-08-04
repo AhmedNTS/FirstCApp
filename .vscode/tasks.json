@@ -1,29 +1,69 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build first c app",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "-g",
-                "src/main.cpp",
-                "-o",
-                "build/main.exe"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "run first c app",
-            "type": "shell",
-            "command": "cd build & main.exe",
-            "problemMatcher": []
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build first c app",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "src/main.cpp",
+        "-o",
+        "build/main.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "run first c app",
+      "type": "shell",
+      "command": "cd build & main.exe",
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "clang.exe build active file",
+      "command": "C:\\Clang\\bin\\clang.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\Clang\\bin"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "gcc.exe build active file",
+      "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "g++.exe build active file",
+      "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
+      }
+    }
+  ]
 }

@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-int main(int argc, char **argv)
+int main()
 {
-    fprintf(stdout, "Hello, World!\n");
-    fflush(stdout);
-    fprintf(stderr, "Error, World!\n");
+   printf("Hello, World! \n");
 
-    return 0;
+   return 0;
 }
