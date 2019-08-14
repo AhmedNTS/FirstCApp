@@ -2,68 +2,33 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build first c app",
+      "label": "Build Active File",
       "type": "shell",
       "command": "g++",
       "args": [
         "-g",
-        "src/main.cpp",
+        "${file}",
         "-o",
-        "build/main.exe"
+        "${workspaceFolder}\\build\\${fileBasename}.exe"
       ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": []
+      "problemMatcher": [
+        "$gcc"
+      ]
     },
     {
-      "label": "run first c app",
+      "label": "Run Active File",
       "type": "shell",
-      "command": "cd build & main.exe",
-      "problemMatcher": []
-    },
-    {
-      "type": "shell",
-      "label": "clang.exe build active file",
-      "command": "C:\\Clang\\bin\\clang.exe",
+      "command": "cd build & ${fileBasename}.exe",
       "args": [
         "-g",
         "${file}",
         "-o",
-        "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
+        "${workspaceFolder}\\build\\${fileBasename}.exe"
       ],
-      "options": {
-        "cwd": "C:\\Clang\\bin"
-      }
-    },
-    {
-      "type": "shell",
-      "label": "gcc.exe build active file",
-      "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
-      "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
-      ],
-      "options": {
-        "cwd": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
-      }
-    },
-    {
-      "type": "shell",
-      "label": "g++.exe build active file",
-      "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
-      "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
-      ],
-      "options": {
-        "cwd": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
-      }
+      "dependsOn": "Build Active File",
+      "problemMatcher": [
+        "$gcc"
+      ]
     }
   ]
 }
