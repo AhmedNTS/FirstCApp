@@ -2,35 +2,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build Active File",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${workspaceFolder}\\build\\${fileBasename}.exe"
-            ],
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
-            "label": "Run Active File",
-            "type": "shell",
-            "command": "cd build & ${fileBasename}.exe",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${workspaceFolder}\\build\\${fileBasename}.exe"
-            ],
-            "dependsOn": "Build Active File",
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
             "type": "shell",
             "label": "gcc.exe build active file",
             "command": "C:\\mingw64\\bin\\gcc.exe",
