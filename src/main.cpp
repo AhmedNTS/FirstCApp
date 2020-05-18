@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cs50.h>
 
 using namespace std;
 
